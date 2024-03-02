@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    color: rgb(230, 230, 230);
+    height: 100vh;
+    width: 100%;
+}
+
+#mainBox{
+    margin-top: 2rem;
+    width: 40%;
+    height: 90%;
+    background-color: transparent;
+    box-shadow: 0 0 20px #434343;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+#searchBox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+#inputBox{
+    flex: 1;
+    padding: .6rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid #dadada34;
+    border-radius: 3px 0 0 3px;
+    color: white;
+    outline: none;
+    border-right: none;
+}
+
+#btn{
+    padding: .6rem;
+    height: 2.5rem;
+    color: white;
+    background-color: rgba(43, 255, 0, 0.555);
+    font-weight: 600;
+    border: 1px solid #dadada34;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+}
+
+#taskList{
+    height: 100%;
+    width: 100%;
+    padding-top: 1.5rem;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#taskList::-webkit-scrollbar {
+    width: 0;
+  }
+
+#tasks{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#tasks li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+#tasks li .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#tasks li .content > span{
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+#tasks li .content > p{
+    font-size: 1.1rem;
+    color: rgb(202, 202, 202);
+}
+
+#dlt{
+    padding: .4rem;
+    border-radius: 5px;
+    background-color: red;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+
+@media (max-width:1200px){
+
+    #mainBox{
+        width: 80%;
+    }
+}
+
+
+@media (max-width:600px) {
+    
+    #mainBox{
+        margin-top: 0;
+        height: 100vh;
+        width: 100vw;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+    #searchBox{
+        padding-top: 1rem;
+    }
+}
